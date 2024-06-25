@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "target": "ES2018",
+    "module": "commonjs",
+    "lib": ["ESNext"],
+    "outDir": "./build",
+    "rootDir": "./",
+    "incremental": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "moduleResolution": "node",
+    "baseUrl": "./",
+    "typeRoots": ["./src/@types", "node_modules/@types"],
+    "paths": {
+      "@app/config/*": ["./src/config/*"],
+      "@app/middlewares": ["./src/api/middlewares"],
+      "@app/utils": ["./src/api/utils"],
+      "@app/routes": ["./src/api/routes/index"],
+      "@app/controllers": ["./src/api/controllers"],
+      "@app/dto": ["./src/api/dto"],
+      "@app/constants": ["./src/api/constants"],
+      "@app/models": ["./src/api/models"],
+      "@app/repositories": ["./src/api/repositories"],
+    },
+    "esModuleInterop": true
+  },
+  "include": ["**/*"],
+  "exclude": ["node_modules", "build"]
+}
